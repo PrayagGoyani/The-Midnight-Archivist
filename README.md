@@ -274,3 +274,5 @@ Contributions are warmly welcomed! Please review our [Contributing Guide](./CONT
 ## 11. Acknowledgments
 
 Created for Hacktoberfest 2026's *Ghost in the Machine* challenge. Special thanks to the open-source communities behind Ollama, Meta Llama, Nomic AI, FastAPI, and React.
+#   T h e - M i d n i g h t - A r c h i v i s t  
+ 
