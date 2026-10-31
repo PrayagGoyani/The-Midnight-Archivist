@@ -1,0 +1,295 @@
+/* src/pages/Archive.css */
+.archive-page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.archive-header {
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: var(--space-4);
+  margin-bottom: var(--space-2);
+}
+
+.archive-title {
+  font-family: var(--font-serif);
+  font-size: var(--type-h1);
+  color: var(--color-primary-text);
+  margin: 0 0 var(--space-2) 0;
+}
+
+.archive-subtitle {
+  font-family: var(--font-sans);
+  font-size: var(--type-body);
+  color: var(--color-secondary-text);
+  margin: 0;
+}
+
+/* Tabs */
+.archive-tabs {
+  display: flex;
+  gap: var(--space-2);
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: var(--space-4);
+}
+
+.archive-tab-btn {
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  padding: var(--space-2) var(--space-4);
+  font-family: var(--font-sans);
+  font-size: var(--type-body);
+  font-weight: 500;
+  color: var(--color-secondary-text);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: -1px;
+}
+
+.archive-tab-btn:hover {
+  color: var(--color-primary-text);
+}
+
+.archive-tab-btn.active {
+  color: var(--color-primary-accent);
+  border-bottom-color: var(--color-primary-accent);
+}
+
+/* Upload Dropzone */
+.dropzone-container {
+  border: 2px dashed var(--color-border);
+  border-radius: 6px;
+  background: var(--color-surface);
+  padding: var(--space-5) var(--space-4);
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.dropzone-container:hover, .dropzone-container.drag-active {
+  border-color: var(--color-primary-accent);
+  background: #f8f5ee;
+}
+
+.dropzone-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.dropzone-icon {
+  color: var(--color-primary-accent);
+}
+
+.dropzone-title {
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  color: var(--color-primary-text);
+  margin: 0;
+}
+
+.dropzone-hint {
+  font-family: var(--font-sans);
+  font-size: var(--type-caption);
+  color: var(--color-secondary-text);
+  margin: 0;
+}
+
+.file-input-hidden {
+  display: none;
+}
+
+/* Documents Table / Card List */
+.documents-table-wrapper {
+  overflow-x: auto;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  background: var(--color-surface);
+}
+
+.documents-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-family: var(--font-sans);
+  font-size: var(--type-caption);
+}
+
+.documents-table th {
+  background: #f2ede1;
+  padding: var(--space-3) var(--space-4);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-secondary-text);
+  border-bottom: 1px solid var(--color-border);
+  white-space: nowrap;
+}
+
+.documents-table td {
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-primary-text);
+  vertical-align: middle;
+}
+
+.documents-table tr:last-child td {
+  border-bottom: none;
+}
+
+.documents-table tr:hover td {
+  background: #f6f3eb;
+}
+
+.doc-title-cell {
+  max-width: 260px;
+}
+
+.doc-primary-title {
+  font-weight: 600;
+  color: var(--color-primary-text);
+  margin-bottom: 2px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.doc-filename {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-secondary-text);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.doc-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  justify-content: flex-end;
+  white-space: nowrap;
+}
+
+.action-icon-btn {
+  background: none;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: 4px 6px;
+  cursor: pointer;
+  color: var(--color-secondary-text);
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.15s ease;
+}
+
+.action-icon-btn:hover {
+  color: var(--color-primary-accent);
+  border-color: var(--color-primary-accent);
+  background: #fff;
+}
+
+.action-icon-btn.danger:hover {
+  color: #a82a22;
+  border-color: #a82a22;
+}
+
+/* Search Tab */
+.search-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.search-box {
+  display: flex;
+  gap: var(--space-3);
+  align-items: center;
+}
+
+.search-input-field {
+  flex: 1;
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background: var(--color-surface);
+  font-family: var(--font-sans);
+  font-size: var(--type-body);
+  color: var(--color-primary-text);
+}
+
+.search-input-field:focus {
+  outline: none;
+  border-color: var(--color-primary-accent);
+}
+
+.search-filters {
+  display: flex;
+  gap: var(--space-4);
+  align-items: center;
+  font-family: var(--font-sans);
+  font-size: var(--type-caption);
+  color: var(--color-secondary-text);
+}
+
+.search-results-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-top: var(--space-3);
+}
+
+.search-result-card {
+  border: 1px solid var(--color-border);
+  border-radius: 5px;
+  background: var(--color-surface);
+  padding: var(--space-4);
+  transition: box-shadow 0.15s ease;
+}
+
+.search-result-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+}
+
+.search-result-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: var(--space-2);
+}
+
+.search-result-doc {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--color-primary-accent);
+}
+
+.search-result-score {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  background: #eef1eb;
+  color: var(--color-secondary-accent);
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+.search-result-snippet {
+  font-family: var(--font-serif);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--color-primary-text);
+  white-space: pre-wrap;
+}
+
+.search-result-meta {
+  margin-top: var(--space-2);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-secondary-text);
+}

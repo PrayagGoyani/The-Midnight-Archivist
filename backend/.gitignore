@@ -1,0 +1,15 @@
+# Local virtual environment
+.venv/
+venv/
+
+# Byte-compiled / cache
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Local database and uploaded files
+data/
+
+# Local environment configuration
+.env

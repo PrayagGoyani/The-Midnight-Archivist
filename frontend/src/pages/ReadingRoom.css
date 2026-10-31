@@ -1,0 +1,385 @@
+/* src/pages/ReadingRoom.css */
+.reading-room-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.reader-container {
+  width: 100%;
+  max-width: 75ch;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  padding-bottom: var(--space-7);
+}
+
+/* Toolbar */
+.reader-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--color-border);
+  width: 100%;
+}
+
+.reader-toolbar-left {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.reader-toolbar-right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.reader-meta-tag {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-secondary-text);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  padding: 3px 8px;
+  border-radius: 3px;
+}
+
+/* Story Header */
+.story-header {
+  text-align: center;
+  padding: var(--space-5) 0 var(--space-4) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.story-title {
+  font-family: var(--font-serif);
+  font-size: var(--type-h1);
+  color: var(--color-primary-text);
+  line-height: 1.25;
+  margin: 0 0 var(--space-3) 0;
+}
+
+.story-premise {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.0625rem;
+  color: var(--color-secondary-text);
+  max-width: 60ch;
+  margin: 0 auto var(--space-3) auto;
+  line-height: 1.5;
+}
+
+.story-attributes {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-3);
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: var(--color-secondary-text);
+}
+
+/* Prose Reader */
+.prose-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.narrative-segment {
+  position: relative;
+}
+
+.segment-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-2);
+  border-bottom: 1px dashed var(--color-border);
+}
+
+.segment-title {
+  font-family: var(--font-serif);
+  font-size: var(--type-h2);
+  color: var(--color-primary-text);
+  margin: 0;
+}
+
+.segment-branch-badge {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  background: #f2ede1;
+  color: var(--color-primary-accent);
+  padding: 2px 8px;
+  border-radius: 3px;
+  border: 1px solid var(--color-border);
+}
+
+.segment-body {
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: var(--color-primary-text);
+}
+
+.segment-body p {
+  margin: 0 0 var(--space-4) 0;
+  text-indent: 1.5em;
+}
+
+.segment-body p:first-of-type {
+  text-indent: 0;
+}
+
+.segment-body p:first-of-type::first-letter {
+  float: left;
+  font-size: 3.25rem;
+  line-height: 0.85;
+  padding-top: 4px;
+  padding-right: 8px;
+  padding-bottom: 2px;
+  font-family: var(--font-serif);
+  color: var(--color-primary-accent);
+  font-weight: 700;
+}
+
+.segment-divider {
+  text-align: center;
+  color: var(--color-secondary-text);
+  font-size: 1.25rem;
+  margin: var(--space-6) 0;
+  letter-spacing: 0.5em;
+  opacity: 0.6;
+}
+
+/* Branch Choices Section */
+.branch-choices-section {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: var(--space-5);
+  margin-top: var(--space-6);
+}
+
+.branch-section-title {
+  font-family: var(--font-serif);
+  font-size: var(--type-h3);
+  color: var(--color-primary-text);
+  margin: 0 0 var(--space-2) 0;
+  text-align: center;
+}
+
+.branch-section-desc {
+  font-family: var(--font-sans);
+  font-size: var(--type-caption);
+  color: var(--color-secondary-text);
+  text-align: center;
+  margin: 0 0 var(--space-4) 0;
+}
+
+.branch-cards-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.branch-choice-card {
+  border: 1px solid var(--color-border);
+  border-radius: 5px;
+  background: #ffffff;
+  padding: var(--space-4);
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.15s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.branch-choice-card:hover:not(:disabled) {
+  border-color: var(--color-primary-accent);
+  box-shadow: 0 4px 12px rgba(111, 63, 59, 0.08);
+  transform: translateY(-1px);
+}
+
+.branch-choice-card:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.branch-choice-label {
+  font-family: var(--font-serif);
+  font-size: 1.0625rem;
+  font-weight: 600;
+  color: var(--color-primary-text);
+  margin: 0 0 4px 0;
+}
+
+.branch-choice-desc {
+  font-family: var(--font-sans);
+  font-size: var(--type-caption);
+  color: var(--color-secondary-text);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.branch-choice-arrow {
+  color: var(--color-primary-accent);
+  flex-shrink: 0;
+}
+
+/* From the Archive Appendix */
+.archive-appendix {
+  border-top: 2px solid var(--color-border);
+  margin-top: var(--space-6);
+  padding-top: var(--space-5);
+}
+
+.appendix-title {
+  font-family: var(--font-serif);
+  font-size: var(--type-h3);
+  color: var(--color-primary-text);
+  margin: 0 0 var(--space-2) 0;
+}
+
+.appendix-desc {
+  font-family: var(--font-sans);
+  font-size: var(--type-caption);
+  color: var(--color-secondary-text);
+  margin: 0 0 var(--space-4) 0;
+}
+
+.appendix-sources-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.appendix-source-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-left: 3px solid var(--color-primary-accent);
+  border-radius: 4px;
+  padding: var(--space-3) var(--space-4);
+}
+
+.appendix-source-doc {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--color-primary-text);
+  margin-bottom: 4px;
+}
+
+.appendix-source-snippet {
+  font-family: var(--font-serif);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--color-secondary-text);
+  font-style: italic;
+}
+
+.appendix-source-meta {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-secondary-text);
+  margin-top: 4px;
+}
+
+/* Branch Navigator Drawer / Sidebar */
+.branch-tree-box {
+  background: #f7f4ed;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: var(--space-4);
+  margin-top: var(--space-4);
+}
+
+.branch-tree-title {
+  font-family: var(--font-sans);
+  font-size: var(--type-caption);
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--color-secondary-text);
+  margin-bottom: var(--space-3);
+}
+
+.branch-node-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.branch-node-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-2) var(--space-3);
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  text-decoration: none;
+  color: var(--color-primary-text);
+  font-size: 0.875rem;
+}
+
+.branch-node-item:hover {
+  border-color: var(--color-primary-accent);
+  text-decoration: none;
+}
+
+/* Print Styles */
+@media print {
+  /* Hide UI elements, navigation rails, toolbars, buttons */
+  .nav-rail,
+  .reader-toolbar,
+  .branch-choices-section,
+  .branch-tree-box,
+  .btn,
+  button {
+    display: none !important;
+  }
+
+  body, .app-shell, .main-content, .reading-room-page, .reader-container {
+    background: #ffffff !important;
+    color: #000000 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  .story-title {
+    font-size: 24pt !important;
+    color: #000000 !important;
+  }
+
+  .story-premise {
+    color: #333333 !important;
+  }
+
+  .segment-body {
+    font-size: 11pt !important;
+    line-height: 1.6 !important;
+    color: #000000 !important;
+  }
+
+  .segment-body p {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .narrative-segment {
+    page-break-inside: avoid;
+  }
+
+  .archive-appendix {
+    page-break-before: always;
+  }
+}

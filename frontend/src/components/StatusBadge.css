@@ -1,0 +1,62 @@
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border: 1px solid transparent;
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.status-uploaded {
+  background: #ede8dc;
+  color: var(--color-secondary-text);
+  border-color: var(--color-border);
+}
+.status-uploaded .status-dot {
+  background: var(--color-secondary-text);
+}
+
+.status-processing {
+  background: #eaece5;
+  color: #4b553e;
+  border-color: #cbd3c3;
+}
+.status-processing .status-dot {
+  background: var(--color-secondary-accent);
+  animation: pulse-dot 1.4s ease-in-out infinite;
+}
+
+.status-ready {
+  background: #eef1eb;
+  color: var(--color-secondary-accent);
+  border-color: #c9d2c2;
+}
+.status-ready .status-dot {
+  background: var(--color-secondary-accent);
+}
+
+.status-failed {
+  background: #f7ebea;
+  color: var(--color-primary-accent);
+  border-color: #e5c9c7;
+}
+.status-failed .status-dot {
+  background: var(--color-primary-accent);
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 0.3; transform: scale(0.85); }
+  50% { opacity: 1; transform: scale(1.15); }
+}

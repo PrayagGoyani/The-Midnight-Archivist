@@ -1,0 +1,77 @@
+/* src/components/Button.css */
+.btn {
+  font-family: var(--font-sans);
+  font-size: var(--type-body);
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+  line-height: 1.4;
+}
+
+.btn-sm {
+  font-size: 0.8125rem;
+  padding: 4px 10px;
+  border-radius: 3px;
+}
+
+.btn-md {
+  font-size: var(--type-body);
+  padding: var(--space-2) var(--space-4);
+}
+
+.btn-primary {
+  background: var(--color-primary-accent);
+  color: var(--color-surface);
+  border-color: var(--color-primary-accent);
+}
+
+.btn-primary:hover {
+  background: #593531; /* darken */
+}
+
+.btn-secondary {
+  background: var(--color-secondary-accent);
+  color: var(--color-surface);
+  border-color: var(--color-secondary-accent);
+}
+
+.btn-secondary:hover {
+  background: #55634d;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--color-primary-accent);
+  border-color: var(--color-primary-accent);
+}
+
+.btn-ghost:hover {
+  background: rgba(111,63,59,0.1);
+}
+
+.btn.loading {
+  position: relative;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.spinner {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  vertical-align: middle;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

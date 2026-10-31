@@ -1,0 +1,221 @@
+/* src/pages/WritingDesk.css */
+.writing-desk-page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  max-width: 800px;
+}
+
+.desk-header {
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: var(--space-4);
+}
+
+.desk-title {
+  font-family: var(--font-serif);
+  font-size: var(--type-h1);
+  color: var(--color-primary-text);
+  margin: 0 0 var(--space-2) 0;
+}
+
+.desk-subtitle {
+  font-family: var(--font-sans);
+  font-size: var(--type-body);
+  color: var(--color-secondary-text);
+  margin: 0;
+}
+
+.desk-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: var(--space-5);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.form-label {
+  font-family: var(--font-sans);
+  font-size: var(--type-caption);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-secondary-text);
+}
+
+.form-hint {
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  color: var(--color-secondary-text);
+  margin-top: -2px;
+}
+
+.premise-textarea {
+  width: 100%;
+  padding: var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background: #fff;
+  font-family: var(--font-serif);
+  font-size: var(--type-body);
+  line-height: 1.6;
+  color: var(--color-primary-text);
+  resize: vertical;
+  min-height: 120px;
+}
+
+.premise-textarea:focus {
+  outline: none;
+  border-color: var(--color-primary-accent);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+@media (max-width: 640px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.desk-select, .desk-input {
+  width: 100%;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background: #fff;
+  font-family: var(--font-sans);
+  font-size: var(--type-body);
+  color: var(--color-primary-text);
+}
+
+.desk-select:focus, .desk-input:focus {
+  outline: none;
+  border-color: var(--color-primary-accent);
+}
+
+/* Radio Card Groups */
+.radio-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3);
+}
+
+@media (max-width: 640px) {
+  .radio-card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.radio-card {
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: var(--space-3);
+  cursor: pointer;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transition: all 0.15s ease;
+}
+
+.radio-card:hover {
+  border-color: var(--color-secondary-accent);
+}
+
+.radio-card.selected {
+  border-color: var(--color-primary-accent);
+  background: #fbf5f4;
+}
+
+.radio-card-title {
+  font-family: var(--font-serif);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--color-primary-text);
+}
+
+.radio-card-target {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-primary-accent);
+}
+
+.radio-card-desc {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  color: var(--color-secondary-text);
+}
+
+/* Grounding Mode Toggle Cards */
+.mode-toggle-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+}
+
+@media (max-width: 640px) {
+  .mode-toggle-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.grounding-box {
+  background: #f6f3eb;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.doc-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  max-height: 180px;
+  overflow-y: auto;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: var(--space-2) var(--space-3);
+  background: #fff;
+}
+
+.doc-check-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-sans);
+  font-size: var(--type-caption);
+  color: var(--color-primary-text);
+  cursor: pointer;
+}
+
+.doc-check-item input[type="checkbox"] {
+  accent-color: var(--color-primary-accent);
+}
+
+/* Loading Overlay / Banner */
+.desk-loading-indicator {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  background: #f7efe6;
+  border: 1px solid #ebd9c8;
+  border-radius: 4px;
+  color: var(--color-primary-text);
+  font-family: var(--font-serif);
+  font-style: italic;
+}

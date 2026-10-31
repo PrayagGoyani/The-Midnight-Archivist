@@ -1,0 +1,32 @@
+/* src/styles/variables.css */
+:root {
+  /* Color palette */
+  --color-bg: #F4F0E7;
+  --color-surface: #FBF9F4;
+  --color-primary-text: #25231F;
+  --color-secondary-text: #746F64;
+  --color-border: #D8D0C2;
+  --color-primary-accent: #6F3F3B;
+  --color-secondary-accent: #66705A;
+
+  /* Spacing (8‑based) */
+  --space-0: 0px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+
+  /* Typography */
+  --font-serif: 'Merriweather', serif;
+  --font-sans: 'Inter', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+
+  --type-h1: 2.25rem; /* 36px */
+  --type-h2: 1.75rem; /* 28px */
+  --type-h3: 1.5rem;  /* 24px */
+  --type-body: 1rem;   /* 16px */
+  --type-caption: 0.875rem; /* 14px */
+}
